@@ -1,0 +1,45 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="ProjektZaliczeniowy_sklepInternetowy.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Kapi</title>
+    <link rel ="stylesheet" href="Styles/Style.css" type="text/css"/>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div id="wrapper">
+                <div id="banner">
+                    <asp:Image ID="Image1" runat="server" Height="197px" ImageUrl="~/Images/kapiiiiii.JPG" Width="100%" />
+                </div>
+                <div id="navigation">
+                    <ul id="nav">
+                        <li><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Index.aspx">Sklep Internetowy</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Pages/About.aspx">Kontakt</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Pages/Management/Management.aspx">Zarządzanie</asp:HyperLink></li>
+                        
+                        
+                        <li style ="float:right">
+                            <asp:HyperLink ID="lnkRegister" NavigateUrl="~/Pages/Account/Register.aspx" runat ="server">Zarejestruj</asp:HyperLink>
+                            <asp:HyperLink ID="litStatus" runat="server" NavigateUrl="~/Pages/ShoppingCart.aspx"></asp:HyperLink>
+                        </li>
+
+                        <li style ="float:right">
+                            <asp:HyperLink ID="lnkLogin" NavigateUrl="~/Pages/Account/Login.aspx" runat ="server">Zaloguj</asp:HyperLink>
+                            <asp:LinkButton ID="lnkLogout" runat="server" OnClick="lnkLogout_Click">Wyloguj</asp:LinkButton>
+                        </li>
+                    </ul>
+                </div>
+                <div id="content">
+              </div>
+                      <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                     </asp:ContentPlaceHolder></div>   
+        </div>
+    </form>
+</body>
+</html>
